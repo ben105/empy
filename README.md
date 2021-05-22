@@ -11,6 +11,29 @@
 
 - Can we get VBA to run Python?
 
+```
+import pandas as pd 
+import openpyxl # one excel reader/writer compatible with pandas
+
+book = openpyxl.load_workbook('input.xlsm', keep_vba = True) # Load existing .xlsm file
+
+with pd.ExcelWriter('output.xlsm', engine='openpyxl') as writer: # open a writer instance with the filename of the 
+    
+    writer.book = book # Hand over input workbook
+    writer.sheets = dict((ws.title, ws) for ws in book.worksheets) # Hand over worksheets
+    writer.vba_archive = book.vba_archive # Hand over VBA information 
+
+
+    df_write.to_excel(writer, sheet_name = 'Sheet1', columns = ['A'],
+                  header = False, index = False,
+                  startrow = 1, startcol = 0)
+    # Writes a column A of the Dataframe into the excel sheet 'Sheet1', which can 
+    # already be present in input.xlsm, to row 1, col 0
+
+    
+    writer.save()
+```
+
 # Getting Started
 
 ## Setup
