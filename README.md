@@ -1,3 +1,16 @@
+# Future Enhancements
+
+## Scope
+
+- Read from the CSV files
+- Calculate aggregates
+- Write results to the Excel spreadsheet
+- Maintain macros in Excel
+
+## Questions
+
+- Can we get VBA to run Python?
+
 # Getting Started
 
 ## Setup
