@@ -1,0 +1,8 @@
+{
+  "excel_path": "",
+
+  "seconds_sheet": "Sec Data",
+  "minutes_sheet": "Min Data",
+  "hours_sheet": "Hour Data",
+  "days_sheet": "Day Data"
+}
