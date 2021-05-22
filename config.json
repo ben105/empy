@@ -1,8 +1,15 @@
 {
-  "excel_path": "",
+  "excel_path": "/Users/benrooke/Downloads/For python Ben.xlsm",
 
   "seconds_sheet": "Sec Data",
   "minutes_sheet": "Min Data",
   "hours_sheet": "Hour Data",
-  "days_sheet": "Day Data"
+  "days_sheet": "Day Data",
+
+  "rates": {
+    "peak": 0.5,
+    "partial_peak": 0.39,
+    "off_peak": 0.18,
+    "super_off_peak": 0.18
+  }
 }
